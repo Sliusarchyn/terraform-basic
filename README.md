@@ -109,7 +109,7 @@ Feel free to fork this template or open an issue/PR if you'd like to improve or 
 
 Specific examples for cloud providers and CI/CD platforms will be pushed to separate branches:
 
-- Google Cloud Platform (GCP)
+- [Google Cloud Platform (GCP)](https://github.com/Sliusarchyn/terraform-basic/tree/gcp-example)
 - GitLab
 - Bitbucket
 - DigitalOcean
