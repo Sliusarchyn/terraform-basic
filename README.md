@@ -8,22 +8,27 @@ A clean and simple Terraform setup with support for **multi-environment infrastr
 
 ```
 terraform-basic/
-├── .terraform/                    # Terraform internal files
-│   └── environment
-├── terraform.tfstate.d/          # Local state folders per workspace
-│   ├── dev/
-│   └── prod/
-├── .gitignore                    # Ignore secrets and .terraform files
+├── modules/
+│   └── gcp/
+│       ├── compute_engine.tf     # VM instances setup
+│       ├── iam.tf                # IAM roles/policies
+│       ├── main.tf               # GCP module entrypoint
+│       ├── networking.tf         # VPC, subnets, firewall rules
+│       ├── outputs.tf            # Outputs from the module
+│       └── variables.tf          # Input variables for the module
+├── terraform.tfstate.d/          # Local state per workspace
+├── .terraform.lock.hcl           # Provider lock file
+├── .gitignore                    # Ignores secrets, state, and .terraform
 ├── dev.tfvars                    # Dev environment variables
 ├── dev-secrets.tfvars            # 🔒 Dev secrets (NOT versioned)
-├── dev-secrets.tfvars.example    # Example dev secrets template
+├── dev-secrets.tfvars.example    # Template for dev secrets
 ├── prod.tfvars                   # Prod environment variables
 ├── prod-secrets.tfvars           # 🔒 Prod secrets (NOT versioned)
-├── prod-secrets.tfvars.example   # Example prod secrets template
-├── main.tf                       # Main Terraform configuration
-├── variables.tf                  # Input variable definitions
-├── makefile                      # Commands for common Terraform actions
-└── README.md                     # You're here!
+├── prod-secrets.tfvars.example   # Template for prod secrets
+├── main.tf                       # Loads the GCP module
+├── variables.tf                  # Global variable declarations
+├── makefile                      # Automation for Terraform commands
+└── README.md
 ```
 
 ---
@@ -101,7 +106,6 @@ make destroy-prod
 ## 🙌 Contribution
 
 Feel free to fork this template or open an issue/PR if you'd like to improve or extend it!
-
 
 ---
 
