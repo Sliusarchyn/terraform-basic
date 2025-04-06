@@ -4,6 +4,20 @@ A clean and simple Terraform setup with support for **multi-environment infrastr
 
 ---
 
+## 🌐 Provider-Specific Examples
+
+Specific examples for cloud providers and CI/CD platforms will be pushed to separate branches:
+
+- [Google Cloud Platform (GCP)](https://github.com/Sliusarchyn/terraform-basic/tree/gcp-example)
+- GitLab
+- Bitbucket
+- DigitalOcean
+- Cloudflare
+
+Stay tuned for updates!
+
+---
+
 ## 📁 Project Structure
 
 ```
@@ -102,17 +116,3 @@ make destroy-prod
 
 Feel free to fork this template or open an issue/PR if you'd like to improve or extend it!
 
-
----
-
-## 🌐 Provider-Specific Examples
-
-Specific examples for cloud providers and CI/CD platforms will be pushed to separate branches:
-
-- [Google Cloud Platform (GCP)](https://github.com/Sliusarchyn/terraform-basic/tree/gcp-example)
-- GitLab
-- Bitbucket
-- DigitalOcean
-- Cloudflare
-
-Stay tuned for updates!
